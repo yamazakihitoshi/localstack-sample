@@ -1,0 +1,43 @@
+buildscript {
+    ext {
+        encoding = 'UTF-8'
+        compatibility = 17
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(compatibility)
+    }
+}
+
+sourceSets {
+    main {
+        resources.srcDirs = ["src/main/java", "src/main/resources"]
+    }
+    test {
+        resources.srcDirs = ["src/test/java", "src/test/resources"]
+    }
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'software.amazon.awssdk:s3:2.20.9'
+}
+
+test {
+    useJUnitPlatform()
+}
