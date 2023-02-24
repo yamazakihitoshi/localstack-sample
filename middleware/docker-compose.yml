@@ -6,7 +6,7 @@ services:
     container_name: sample-localstack
     ports:
       - 4566:4566
-      - 8080:8080
+      - 8000:8080
     environment:
       - SERVICES=s3,sqs
       - AWS_ACCESS_KEY_ID=sample

@@ -35,7 +35,11 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.0.1'
     implementation 'software.amazon.awssdk:s3:2.20.9'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.projectlombok:lombok:1.18.22'
 }
 
 test {
